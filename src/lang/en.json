@@ -1,0 +1,63 @@
+{
+  "#loginPage": {
+    "title": "Login"
+  },
+  "#jobDetailsPage": {
+    "title": "Job Details"
+  },
+  "#loginLabel": {
+    "text": "Login"
+  },
+  "#loginField": {
+    "message": "Enter your login"
+  },
+  "#passwordLabel": {
+    "text": "Password"
+  },
+  "#passwordField": {
+    "message": "Enter your password"
+  },
+  "#loginButton": {
+    "text": "Login"
+  },
+  "#JobSettings": {
+    "text": "Settings"
+  },
+  "#langPicker": {
+    "items": ["Change language", "fr", "en"]
+  },
+  "#Save": {
+    "text": "Save"
+  },
+  "#Search": {
+    "text": "Search"
+  },
+  "#Logout": {
+    "text": "Logout"
+  },
+  "#SaveOk": {
+    "text": "Save OK"
+  },
+  "#JobListingPage": {
+    "title": "Jobs"
+  },
+  "#pref1Label": {
+    "text": "Label1"
+  },
+  "#pref1Field": {
+    "text": "Field1"
+  },
+  "#pref2Label": {
+    "text": "Label2"
+  },
+  "#pref2Field": {
+    "text": "Field2"
+  },
+  "#pref3Label": {
+    "text": "Label3"
+  },
+  "#pref3Field": {
+    "text": "Field3"
+  }
+
+}

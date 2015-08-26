@@ -1,0 +1,6 @@
+{
+  "main": "src/login.js",
+  "dependencies": {
+    "tabris": "^1.0"
+  }
+}
