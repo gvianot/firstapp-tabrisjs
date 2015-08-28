@@ -1,18 +1,18 @@
+var settingsPage;
+var lang;
 var texts = require('./langs.js').texts();
 
-function disconnect(){
-	localStorage.removeItem('login');
-	localStorage.removeItem('password');
-	localStorage.removeItem('lang');
-	window.plugins.toast.showShortTop(texts['#Logout'].text);
-	require('./login.js').checkIsConnected();
+function disconnect() {
+	// localStorage.clear();
+	require('./pagesApp.js').closeAllPages();
 }
 
 function createSettingsPage() {
 
-	var settingsPage = tabris.create('Page', {
+	settingsPage = tabris.create('Page', {
 		id: 'JobSettings',
-		background: 'white'
+		background: 'white',
+		topLevel: true
 	});
 
 	tabris.create('TextView', {
@@ -35,32 +35,38 @@ function createSettingsPage() {
 		layoutData: {left: ['#pref2Label', 10], right: 10, baseline: '#pref2Label'}
 	}).appendTo(settingsPage);
 
-	tabris.create('Button', {
-		id: 'Save',
-		layoutData: {right: 40, top: ['#pref2Field',40], width: 220}
-	}).on('select', function() {
-		window.plugins.toast.showShortTop(texts['#SaveOk'].text);
+	tabris.create('TextView', {
+		id: 'pref3Label',
+		layoutData: {left: 10, top: ['#pref2Label', 18], width: 120}
 	}).appendTo(settingsPage);
 
 	tabris.create('Picker', {
 		id: 'langPicker',
-		layoutData: {right: 40, top: ['#Save', 18], width: 220}
+		layoutData: {left: ['#pref3Label', 10], right: 10, baseline: '#pref3Label'}
 	}).on('change:selection', function(widget, selection, options) {
 	    if (options.index > 0) {
-	      localStorage.setItem('lang',selection);
+	    	lang = selection;
 	    }
   	}).appendTo(settingsPage);
 
+  	tabris.create('Button', {
+		id: 'Save',
+		layoutData: {right: 40, top: ['#pref3Label',40], width: 220}
+	}).on('select', function() {
+		localStorage.setItem('lang',lang);
+		tabris.ui.children('Page').forEach(function(page) {
+			page.apply(require('./langs.js').texts());
+		});
+	}).appendTo(settingsPage);
+
 	tabris.create('Button', {
 		id: 'Logout',
-		layoutData: {right: 40, top: ['#langPicker',40], width: 220}
+		layoutData: {right: 40, top: ['#Save',40], width: 220}
 	}).on('select', function() {
 		disconnect();
 	}).appendTo(settingsPage);
 
-
 	settingsPage.apply(texts);
-
 
 	return settingsPage;
 

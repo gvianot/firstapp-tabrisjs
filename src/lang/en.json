@@ -5,6 +5,9 @@
   "#jobDetailsPage": {
     "title": "Job Details"
   },
+  "#News": {
+    "title": "News"
+  },
   "#loginLabel": {
     "text": "Login"
   },
@@ -21,7 +24,8 @@
     "text": "Login"
   },
   "#JobSettings": {
-    "text": "Settings"
+    "text": "Settings",
+    "title": "Settings"
   },
   "#langPicker": {
     "items": ["Change language", "fr", "en"]
@@ -39,7 +43,7 @@
     "text": "Save OK"
   },
   "#JobListingPage": {
-    "title": "Jobs"
+    "title": "Jobs "
   },
   "#pref1Label": {
     "text": "Label1"
@@ -58,6 +62,24 @@
   },
   "#pref3Field": {
     "text": "Field3"
+  },
+   "#jobTitle": {
+    "text": "Title"
+  },
+ "#jobFunction": {
+    "text": "Function"
+  },
+  "#jobArea": {
+    "text": "Area"
+  },
+  "#jobCountry": {
+    "text": "Country"
+  },
+  "#jobCreationDate": {
+    "text": "Creation Date"
+  },
+  "#offersLabel": {
+    "text": "Job Offers"
   }
 
 }

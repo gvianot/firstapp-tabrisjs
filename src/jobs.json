@@ -1,11 +1,33 @@
 [
   {
-    "title": "JOB1"
+    "title": "JOB1",
+    "area":{
+    	"label": "area 1"
+	},
+	"country":{
+    	"label": "coutry 1"
+	},
+	"openDate": "2011-01-04"
+
   },
   {
-    "title": "JOB2"
+    "title": "JOB2",
+    "area":{
+    	"label": "area 1"
+	},
+	"country":{
+    	"label": "coutry 1"
+	},
+	"openDate": "2011-01-04"
   },
   {
-    "title": "JOB3"
+    "title": "JOB3",
+    "area":{
+    	"label": "area 1"
+	},
+	"country":{
+    	"label": "coutry 1"
+	},
+	"openDate": "2011-01-04"
   }
 ]

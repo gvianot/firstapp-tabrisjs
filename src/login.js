@@ -1,10 +1,10 @@
-/* globals fetch: false, Promise: true*/
 var texts = require('./langs.js').texts();
-
+tabris.create('Drawer').append(tabris.create('PageSelector'));
+var loginPage;
 
 function createLoginPage() {
 
-	var loginPage = tabris.create('Page', {
+	loginPage = tabris.create('Page', {
 		id: 'loginPage',
 		background: 'white',
 		topLevel: true
@@ -46,32 +46,33 @@ function createLoginPage() {
 		var login = localStorage.getItem('login');
 		var pwd = localStorage.getItem('password');
 		console.log('login ' + login + ' pwd ' + pwd);
-
-		require('./jobListing.js').createJobListingPage().open();
-		
+		require('./services/LoginService.js').checkLogin(login,pwd,function() {
+			require('./pagesApp.js').openAllPages();
+		});
 
 	});
-
-
 
 	loginPage.apply(texts);
 
 	return loginPage;
 
 }
+
 function checkIsConnected() {
 	var login = localStorage.getItem('login');
 	var pwd = localStorage.getItem('password');
-
+	console.log(login + ' ' + pwd);
 
 	if( login === null &&  pwd === null) {
 		createLoginPage().open();
-	}else{
-		require('./jobListing.js').createJobListingPage().open();
+	}else {
+		require('./pagesApp.js').openAllPages();
 	}
+
+
 }
 
-checkIsConnected();
+
+createLoginPage().open();
 module.exports.checkIsConnected = checkIsConnected;
-module.exports.createLoginPage = createLoginPage;
 

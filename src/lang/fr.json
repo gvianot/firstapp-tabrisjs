@@ -1,42 +1,46 @@
 {
   "#loginPage": {
-    "title": "Login"
+    "title": "Connection"
   },
   "#jobDetailsPage": {
-    "title": "Job Details"
+    "title": "Details Job"
+  },
+  "#News": {
+    "title": "News"
   },
   "#loginLabel": {
     "text": "Login"
   },
   "#loginField": {
-    "message": "Entrer votre login"
+    "message": "Enter your login"
   },
   "#passwordLabel": {
-    "text": "Password"
+    "text": "Mot de passe"
   },
   "#passwordField": {
-    "message": "Entrer votre mot de passe"
+    "message": "Enter your password"
   },
   "#loginButton": {
     "text": "Login"
   },
   "#JobSettings": {
-    "text": "Réglages"
+    "text": "Réglages",
+    "title": "Réglages"
   },
   "#langPicker": {
     "items": ["Changer langue", "fr", "en"]
   },
   "#Save": {
-    "text": "Sauvergarder"
+    "text": "Sauvegarder"
   },
   "#Search": {
-    "text": "Rechercher"
+    "text": "Search"
   },
   "#Logout": {
-    "text": "Se déconnecter"
+    "text": "Logout"
   },
   "#SaveOk": {
-    "text": "Sauvergarde OK"
+    "text": "Save OK"
   },
   "#JobListingPage": {
     "title": "Emploi"
@@ -58,6 +62,24 @@
   },
   "#pref3Field": {
     "text": "Field3"
+  },
+   "#jobTitle": {
+    "text": "Title"
+  },
+ "#jobFunction": {
+    "text": "Function"
+  },
+  "#jobArea": {
+    "text": "Area"
+  },
+  "#jobCountry": {
+    "text": "Country"
+  },
+  "#jobCreationDate": {
+    "text": "Creation Date"
+  },
+  "#offersLabel": {
+    "text": "Job Offers"
   }
 
 }
