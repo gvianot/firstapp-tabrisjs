@@ -1,7 +1,7 @@
 # first app 
 
 
-To launch app:
+To launch application
 
   npm install
   
